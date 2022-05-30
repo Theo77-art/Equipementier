@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>{% block title %}Equipementier{% endblock %}</title>
+      {% block stylesheets %}
+             {{ encore_entry_link_tags('app') }}
+      {% endblock %} 
+   </head>
+     <body>
+      {% block body %}
+      <div id=menu>
+      <a href="{{ path('homepage') }}">Equipement</a>
+      <a href="{{ path('add') }}">Formulaire</a>
+      </div>
+      {% endblock %}
+   </body>
+</html>
