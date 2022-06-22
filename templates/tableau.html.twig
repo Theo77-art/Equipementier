@@ -1,15 +1,15 @@
 {% include 'menu.html.twig' %}
 
 {% block body %}
-                 
+                 <table id="equipement">
                     <tr>
                     {% for equipement in produits %} 
                     {# Pour chaque colonne présent en base de données, une ligne du tableau se crée #}                
                         <th scope="row"> {{ equipement.id }}</th>
                         <td>{{ equipement.nom }}</td>
                         <td>{{ equipement.quantite }}</td>
-                        <td><a href={{ path("details",{'id':equipement.id})}} role="button">Description</a>/
+                        <td><a href={{ path("details",{'id':equipement.id})}} role="button">Description</a>
                     </tr>
                     {% endfor %}
-
+                 </table>
 {% endblock %}
